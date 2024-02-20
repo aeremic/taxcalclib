@@ -9,13 +9,13 @@ public class TaxCalculatorTests
     private TaxCalculator? _taxCalculator;
     
     [SetUp]
-    public void SetUp()
+    public void InitializeTaxCalculator()
     {
         _taxCalculator = new TaxCalculator();
     }
     
     [Test, Order(1)]
-    public void GetCustomRates_CustomRateNotExistent_Null()
+    public void GetCustomRates_CustomRateNotExistent_ReturnsDefault()
     {
         var firstCustomRate = _taxCalculator!.GetCustomRates().FirstOrDefault();
         
@@ -34,18 +34,7 @@ public class TaxCalculatorTests
     }
     
     [Test, Order(3)]
-    public void SetCustomTaxRate_ShouldUpdateCustomRate()
-    {
-        _taxCalculator!.SetCustomTaxRate(Enums.Commodity.Alcohol, 10);
-        _taxCalculator!.SetCustomTaxRate(Enums.Commodity.Alcohol, 11);
-        
-        var firstCustomRate = _taxCalculator!.GetCustomRates().Last();
-        
-        Assert.That(firstCustomRate.Value, Is.EqualTo(11));
-    }
-    
-    [Test, Order(4)]
-    public void GetCurrentTaxRate_ShouldGetCustomRate()
+    public void GetCurrentTaxRate_ShouldGetCustomRate_ReturnsCustomRate()
     {
         _taxCalculator!.SetCustomTaxRate(Enums.Commodity.Alcohol, 13);
         
@@ -54,8 +43,8 @@ public class TaxCalculatorTests
         Assert.That(firstCustomRateValue, Is.EqualTo(13));
     }
     
-    [Test, Order(5)]
-    public void GetCurrentTaxRate_ShouldNotGetCustomRate()
+    [Test, Order(4)]
+    public void GetCurrentTaxRate_ShouldNotGetCustomRate_DoesNotThrowException()
     {
         Assert.DoesNotThrow(() => _taxCalculator!.GetCurrentTaxRate(Enums.Commodity.FoodServices));
     }

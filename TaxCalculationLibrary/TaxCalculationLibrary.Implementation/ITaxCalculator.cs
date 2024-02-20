@@ -13,6 +13,11 @@ public interface ITaxCalculator
     public double GetStandardTaxRate(Commodity commodity);
     
     /// <summary>
+    /// Gets the set custom rates.
+    /// </summary>
+    public Dictionary<Tuple<Commodity, string>, double> GetCustomRates();
+    
+    /// <summary>
     /// This method allows the client to remotely set new custom tax rates.
     /// When they do, we save the commodity/rate information as well as the UTC timestamp of when it was done.
     /// NOTE: Each instance of this object supports a different set of custom rates, since we run one thread per customer.
@@ -32,9 +37,4 @@ public interface ITaxCalculator
     /// If there is no custom tax currently active, use the standard tax rate.
     /// </summary>
     public double GetCurrentTaxRate(Commodity commodity);
-
-    /// <summary>
-    /// Gets the set custom rates.
-    /// </summary>
-    public Dictionary<Tuple<Commodity, string>, double> GetCustomRates();
 }

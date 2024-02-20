@@ -20,3 +20,4 @@ C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Implemen
 C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Implementation\obj\Debug\net7.0\refint\TaxCalculationLibrary.Implementation.dll
 C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Implementation\obj\Debug\net7.0\TaxCalculationLibrary.Implementation.pdb
 C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Implementation\obj\Debug\net7.0\ref\TaxCalculationLibrary.Implementation.dll
+C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Implementation\obj\Debug\net7.0\TaxCalculationLibrary.Implementation.sourcelink.json

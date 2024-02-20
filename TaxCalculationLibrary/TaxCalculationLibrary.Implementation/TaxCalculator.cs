@@ -21,6 +21,8 @@ public class TaxCalculator : ITaxCalculator
 
     #region ITaxCalculator implementation
 
+    public Dictionary<Tuple<Commodity, string>, double> GetCustomRates() => CustomRates;
+
     public double GetStandardTaxRate(Commodity commodity)
     {
         switch (commodity)
@@ -51,19 +53,14 @@ public class TaxCalculator : ITaxCalculator
     {
         var customRateKey = Tuple.Create(commodity, date.ToString(CultureInfo.InvariantCulture));
 
-        return CustomRates.GetValueOrDefault(customRateKey);
+        return CustomRates.GetValueOrDefault(customRateKey, (double)Commodity.Default);
     }
 
     public double GetCurrentTaxRate(Commodity commodity)
     {
         var customRateKey = Tuple.Create(commodity, DateTime.Now.ToString(CultureInfo.InvariantCulture));
 
-        return CustomRates.GetValueOrDefault(customRateKey);
-    }
-
-    public Dictionary<Tuple<Commodity, string>, double> GetCustomRates()
-    {
-        return CustomRates;
+        return CustomRates.GetValueOrDefault(customRateKey, (double)Commodity.Default);
     }
 
     #endregion

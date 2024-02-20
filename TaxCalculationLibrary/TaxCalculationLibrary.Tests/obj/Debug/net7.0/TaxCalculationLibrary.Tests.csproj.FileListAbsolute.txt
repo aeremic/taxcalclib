@@ -188,3 +188,4 @@ C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Tests\ob
 C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Tests\obj\Debug\net7.0\TaxCalculationLibrary.Tests.pdb
 C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Tests\obj\Debug\net7.0\TaxCalculationLibrary.Tests.genruntimeconfig.cache
 C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Tests\obj\Debug\net7.0\ref\TaxCalculationLibrary.Tests.dll
+C:\Users\Andrija\taxcalclib\TaxCalculationLibrary\TaxCalculationLibrary.Tests\obj\Debug\net7.0\TaxCalculationLibrary.Tests.sourcelink.json
