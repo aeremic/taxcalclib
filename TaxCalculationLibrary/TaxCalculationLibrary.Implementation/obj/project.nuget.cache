@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wo4ssZf2pSMRVQm8SkxuU2C/naD8U2aechsG6ZxDX0fogtepeqS7EX1bm2u04BTGVfdhKwPEIn35o9WVrlNpcg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Andrija\\taxcalclib\\TaxCalculationLibrary\\TaxCalculationLibrary.Implementation\\TaxCalculationLibrary.Implementation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andrija\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Andrija\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Andrija\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
