@@ -53,14 +53,14 @@ public class TaxCalculator : ITaxCalculator
     {
         var customRateKey = Tuple.Create(commodity, date.ToString(CultureInfo.InvariantCulture));
 
-        return CustomRates.GetValueOrDefault(customRateKey, (double)Commodity.Default);
+        return CustomRates.TryGetValue(customRateKey, out var rate) ? rate : GetStandardTaxRate(commodity);
     }
 
     public double GetCurrentTaxRate(Commodity commodity)
     {
         var customRateKey = Tuple.Create(commodity, DateTime.Now.ToString(CultureInfo.InvariantCulture));
 
-        return CustomRates.GetValueOrDefault(customRateKey, (double)Commodity.Default);
+        return CustomRates.TryGetValue(customRateKey, out var rate) ? rate : GetStandardTaxRate(commodity);
     }
 
     #endregion
